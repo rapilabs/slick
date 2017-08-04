@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <meta name="description" content="A slick slack clone">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Slick</title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+ <style>
+ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+ }
+ ul {
+  list-style: none;
+ }
+ html {
+  box-sizing: border-box;
+  font-family: Lato,appleLogo,sans-serif;
+  font-size: 16px;
+  color: #2C2D30;
+ }
+ *, *:before, *:after {
+  box-sizing: inherit;
+ }
+ html, body, #app, nav {
+  height: 100%;
+ }
+
+ #app {
+  display: flex;
+ }
+
+ nav {
+  background-color: #4D394B;
+  color: #AB9BA9;
+  width: 220px;
+  padding: 16px;
+ }
+ nav h1 {
+  color: #fff;
+ }
+ nav header {
+  height: 60px;
+ }
+ nav .username {
+  font-size: .875rem;
+ }
+ nav h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: normal;
+ }
+ nav .channels, nav .direct-messages {
+  margin: 8px 0 32px 0;
+ }
+ nav .channels li:before {
+  content: '#';
+  padding-right: 5px;
+ }
+ nav .direct-messages li:before {
+  content: '○';
+  padding-right: 5px;
+ }
+
+ .channel {
+  flex: 1;
+  height: 53px;
+  border-bottom: 1px solid #E8E8E8;
+  padding-top: 10px;
+  padding-left: 20px;
+ }
+ .channel h2 {
+  font-size: 1.125rem;
+  font-weight: 900;
+ }
+ </style>
+</head>
+<body>
+
+ <div id="app">
+  <nav>
+   <header>
+    <h1>Slick</h1>
+    <div class="username">shangxiao</div>
+   </header>
+   <section class="channels">
+    <h2>Channels</h2>
+    <ul>
+     <li>general</li>
+     <li>random</li>
+    </ul>
+   </section>
+   <section class="direct-messages">
+    <h2>Direct Message</h2>
+    <ul>
+     <li>brntn</li>
+     <li>markush</li>
+     <li>veronica</li>
+    </ul>
+   </section>
+  </nav>
+  <div class="channel">
+   <header>
+    <h2>#general</h2>
+   </header>
+  </div>
+ </div>
+
+</body>
+</html>
