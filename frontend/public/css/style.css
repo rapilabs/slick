@@ -1,0 +1,26 @@
+@font-face {
+ font-family: 'EmojiSymbols';
+ src: url('/fonts/EmojiSymbols-Regular.woff')
+}
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+ margin: 0;
+ padding: 0;
+}
+ul {
+ list-style: none;
+}
+html, input {
+ box-sizing: border-box;
+ font-family: Lato,appleLogo,sans-serif;
+ font-size: 16px;
+ color: #2C2D30;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+html, body, #app, nav {
+ height: 100%;
+}
+.emoji {
+ font-family: "EmojiSymbols";
+}
