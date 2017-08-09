@@ -2,7 +2,8 @@
   "name": "sliiick",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "vue": "^2.3.3"
