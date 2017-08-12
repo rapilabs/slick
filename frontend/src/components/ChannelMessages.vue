@@ -22,7 +22,8 @@ export default {
   name: 'channel-messages',
   mounted () {
 
-    let ws = new WebSocket('ws://0.0.0.0:8000/sub')
+    let protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+    let ws = new WebSocket(`${protocol}://${window.location.host}/sub`)
     ws.onopen = () => {
       console.log('Connected…');
     };

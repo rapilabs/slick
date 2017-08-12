@@ -42,7 +42,11 @@ module.exports = {
     contentBase: __dirname + '/frontend/public',
     publicPath: '/js/',
     proxy: [{
-      context: ['/messages', '/register', '/whoami', '/avatar'],
+      context: ['/messages', '/register', '/whoami', '/avatar', '/sub'],
+      target: 'http://localhost:8000',
+    }, {
+      context: ['/sub'],
+      ws: true,
       target: 'http://localhost:8000',
     }],
     historyApiFallback: true,
