@@ -2,7 +2,7 @@
  <nav>
   <header>
    <h1>Sliiick</h1>
-   <div class="username">{{ username }}</div>
+   <div class="username">{{ user.username }}</div>
   </header>
   <section class="channels">
    <h2>Channels</h2>
@@ -22,9 +22,9 @@
 <script>
 export default {
   name: 'sidebar',
+  props: ['user'],
   data () {
     return {
-      username: 'shangxiao',
       channels: [
         'general',
         'random',

@@ -1,3 +1,6 @@
 aiohttp==2.2.3
 gunicorn==19.7.1
 aiohttp-index==0.1
+aiohttp-session==1.0.0
+cryptography==2.0.3
+Pillow==4.2.1

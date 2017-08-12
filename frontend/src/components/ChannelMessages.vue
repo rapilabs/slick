@@ -2,7 +2,7 @@
 <section>
  <div class="message" v-for="message in messages">
   <div class="message-gutter">
-   <img class="avatar" src="/img/slackatar.png" />
+   <img class="avatar" v-bind:src="'/avatar?username=' + message.username" width="48" height="48" />
   </div>
   <div class="message-content">
    <div class="message-info">
