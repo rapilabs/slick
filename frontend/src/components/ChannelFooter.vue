@@ -1,21 +1,34 @@
 <template>
 <footer>
- <form class="message-form">
-  <input type="text" v-bind:placeholder="msgPlaceholder" />
+ <form class="message-form" v-on:submit="submit">
+  <input type="text" v-bind:placeholder="msgPlaceholder" v-model="message" />
   <button class="emoji">&#x1F600;</button>
  </form>
 </footer>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'channel-footer',
-  data () {
+  data() {
     let channelName = 'general';
     return {
+      message: '',
       msgPlaceholder: `Message #${channelName}`,
     };
   },
+  methods: {
+    submit(e) {
+      e.preventDefault();
+      axios.post('/messages', {
+        content: this.message,
+      }).then(() => {
+        this.message = '';
+      });
+    }
+  }
 };
 </script>
 

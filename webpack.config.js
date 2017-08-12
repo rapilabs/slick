@@ -41,6 +41,10 @@ module.exports = {
   devServer: {
     contentBase: __dirname + '/frontend/public',
     publicPath: '/js/',
+    proxy: [{
+      context: ['/messages'],
+      target: 'http://localhost:8000',
+    }],
     historyApiFallback: true,
     noInfo: true
   },
